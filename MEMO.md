@@ -58,17 +58,23 @@ Sự dịch chuyển từ nhóm thử nghiệm công nghệ sang người dùng 
 
 **§3. Ba dự đoán hướng đi (6–12 tháng tới)**
 
-**Dự đoán 1** *(loại: mở rộng tính năng / segment / mô hình kiếm tiền / đe dọa Big Tech)*
-- **Dự đoán:** …
-- **Lập luận:** … *(dẫn ngược về §1–§2)*
+**Dự đoán 1** *(loại: Thay đổi mô hình kiếm tiền & Mở rộng segment Developer)*
+- **Dự đoán:** Google sẽ tung dòng **Gemini 4.x Flash** và thế hệ **Gemma on-device mới** với nhịp độ phát hành nhanh, mở rộng context 2M+, tiếp tục hạ giá API xuống mức sàn để triệt hạ các đối thủ trung gian và độc chiếm thị phần backend cho ứng dụng AI của lập trình viên.
+- **Lập luận:** Nhịp độ Flash 106 ngày ở §1 chứng minh Google đã làm chủ kinh tế học đơn vị trên TPU v6e Trillium (hạ chi phí xuống 2,36 USD/task, giảm 33x điện năng), trực tiếp giải quyết điểm đau (Push) ở §2 của nhóm Dev/Startup đang chịu gánh nặng chi phí API quá đắt đỏ từ OpenAI và Anthropic.
 
-**Dự đoán 2** *(loại: …)*
-- **Dự đoán:** …
-- **Lập luận:** …
+**Dự đoán 2** *(loại: Mở rộng tính năng & Vertical AI ngách)*
+- **Dự đoán:** Google sẽ nhân rộng công thức NotebookLM để phát triển các **sản phẩm Vertical AI thị trường ngách**, trọng tâm là bộ công cụ Deep Research for Enterprise tích hợp sâu vào Google Workspace (Drive, Docs, Sheets, Slides) tự động trích xuất báo cáo, bảng tính và slide thuyết trình bám nguồn tuyệt đối.
+- **Lập luận:** Mốc NotebookLM Audio Overview (09/2024) và Deep Research (12/2024) ở §1 chứng minh người dùng cần AI bám nguồn để triệt tiêu ảo giác; điều này khớp chính xác với JTBD ở §2 của sinh viên và nhân viên Workspace (cần tóm tắt tài liệu ôn thi và tạo slide/sheets họp tuần 0-click từ dữ liệu nội bộ sẵn có).
 
-**Dự đoán 3** *(loại: …)*
-- **Dự đoán:** …
-- **Lập luận:** …
+**Dự đoán 3** *(loại: Đe dọa từ Big Tech & Tác tử tự hành)*
+- **Dự đoán:** Sau khi để OpenAI và Anthropic dò đường thị trường tác tử, Google sẽ dồn lực phản công với **Frontier Flagship thế hệ mới** kết hợp công nghệ **Spark trên Gemini** và nền tảng tác tử kỹ thuật **Antigravity (AGY)**: đạt hiệu năng ngang ngửa hoặc vượt trội các tác tử của đối thủ nhưng với **giá rẻ hơn 3x–5x** nhờ làm chủ hạ tầng TPU v6e/v7 và trần xuất 1M token.
+- **Lập luận:** Mốc Gemini 4 Argon (09/2026) ở §1 đã chứng minh trần 1M output và dogfooding nội bộ (chuyển đổi 800k dòng Fuchsia sang Rust, giải phóng >300 TiB RAM) giải quyết triệt để điểm đau đứt gãy luồng code ở §2, giúp Google dùng ưu thế chuỗi giá trị bán dẫn khép kín để bẻ gãy quán tính thói quen (Inertia) của OpenAI/Claude.
+
+---
+
+**Phản biện CP3 (Stress-test nhận định):**
+- **Dự đoán tự tin nhất:** **Dự đoán 1 (Gemini 4.x Flash & hạ giá API chiếm lĩnh thị phần Dev).** Vì đây là đòn bẩy xuất phát từ lợi thế bất đối xứng không thể sao chép của Google: sở hữu chuỗi chip TPU độc quyền và mạng lưới trung tâm dữ liệu tự chủ. Trong khi đối thủ phải gánh biên lợi nhuận >75% của Nvidia, Google có thể cung cấp token giá cận biên mà vẫn có lãi. Playbook 106 ngày ra 4 bản Flash đã chứng minh thực tế hướng đi này.
+- **Giả định nếu sai sẽ làm nó gãy:** **Giả định về "Độ co giãn của cầu theo giá của lập trình viên (Developer Price Elasticity)".** Dự đoán này giả định rằng chỉ cần API rẻ hơn đáng kể, lập trình viên sẽ chuyển sang Google. Giả định này sẽ gãy nếu các yếu tố phi giá cả (như thói quen dùng OpenAI SDK, hệ sinh thái tool của Claude, sự trung thành với Cursor) có quán tính (Inertia) quá lớn, hoặc nếu các mô hình nguồn mở như DeepSeek tiếp tục đẩy chi phí suy luận về mức gần bằng 0 trên mọi cloud khác.
 
 **§4. AI Log**
 
