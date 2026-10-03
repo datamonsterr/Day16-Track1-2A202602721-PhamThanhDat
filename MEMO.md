@@ -80,6 +80,11 @@ Sự dịch chuyển từ nhóm thử nghiệm công nghệ sang người dùng 
 
 | Việc | AI làm hay bạn làm? | Bạn kiểm chứng/phán đoán lại thế nào? |
 |---|---|---|
-| | | |
-| | | |
+| **Thu thập dữ liệu, trích xuất 8 cột mốc & bối cảnh đối thủ (§1)** | AI trích xuất sơ bộ từ bài báo khoa học và Google Blog; **Bạn** lọc và chọn 8 mốc quan trọng nhất làm thay đổi cấu trúc ngăn xếp. | Loại bỏ các mốc thử nghiệm ngắn hạn (Google Bard 2023, Gemini 1.5 Flash-8B, cập nhật UI phụ); bổ sung mốc nhúng sâu Google Workspace và chương trình SheerID Free 1 năm cho sinh viên; kiểm tra chéo các URL nguồn gốc xem có bị lỗi 404 không. |
+| **Phân tích tệp Early Adopters vs Tệp Hiện tại (§2)** | Cả hai phối hợp: **Bạn** đưa ra định hướng và phản biện; AI hỗ trợ đối chiếu dữ liệu thảo luận cộng đồng (`r/Bard`, `r/Singularity`). | Phản biện và hiệu chỉnh nhận định ban đầu: ở mốc 12/2023 sinh viên chưa dùng Gemini vì ChatGPT đang độc tôn; chỉ sau khi có NotebookLM + gói Free 1 năm SheerID + context 2M token (giữa 2024) thì sinh viên mới ồ ạt chuyển đổi. |
+| **Chuẩn hóa JTBD từ tính năng sang Outcome-oriented Jobs (§2)** | **Bạn** xác định các bài toán nghiệp vụ thực tế; AI hỗ trợ chuẩn hóa cấu trúc ngữ nghĩa JTBD. | Bác bỏ các mô tả thuần tính năng ("cần AI tạo slide", "tóm tắt email"); bắt buộc viết lại thành kết quả đo lường được (tiêu hóa 300 trang tài liệu ôn thi trong 15 phút không ảo giác; chốt 30 email thành lịch hẹn trong 30 giây). |
+| **Bóc tách Switching Cost theo khung 4 Forces of Progress (§2)** | AI gợi ý khung phân tích 4 lực; **Bạn** định vị chính xác các lực cản thực tế của người dùng. | Xác định các biến số tâm lý thực tế: nỗi sợ rò rỉ dữ liệu Workspace nội bộ (Anxiety), tiền lệ Google hay đổi tên sản phẩm (Bard $\rightarrow$ Duet AI $\rightarrow$ Gemini), và quán tính hàng trăm nghìn USD thư viện prompt OpenAI của doanh nghiệp (Inertia). |
+| **Đưa ra 3 Dự đoán Tương lai 6–12 tháng & Stress-test (§3)** | **Bạn** khởi tạo 5 định hướng chiến lược từ quan sát thị trường; AI hỗ trợ sắp xếp theo trục thời gian và format đúng 2 dòng. | Đích thân thực hiện stress-test giả định: nhận định đòn bẩy giá rẻ chiếm lĩnh thị phần Dev sẽ gãy nếu "độ co giãn cầu theo giá" bị triệt tiêu bởi quán tính tooling (Cursor, Claude, OpenAI SDK) hoặc mã nguồn mở DeepSeek. |
+| **Thiết kế & Xây dựng Infographic Báo cáo (index.html)** | AI viết mã nguồn HTML, CSS glassmorphism và Chart.js; **Bạn** chỉ đạo cấu trúc trực quan. | Yêu cầu căn giữa nội dung (center), phân tách so sánh 2 cột rõ rệt, tích hợp timeline tương tác và rà soát tính chính xác của các số liệu kinh tế học ($2.36/task, 33x điện năng). |
+
 

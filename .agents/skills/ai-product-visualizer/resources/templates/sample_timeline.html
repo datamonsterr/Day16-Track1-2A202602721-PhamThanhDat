@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gemini Ecosystem Timeline & Strategic Decisions</title>
+  <style>
+    :root {
+      --bg: #0B0F19;
+      --card-bg: rgba(22, 27, 46, 0.85);
+      --card-border: rgba(99, 130, 246, 0.25);
+      --primary: #4F87ED;
+      --accent-purple: #9476C5;
+      --accent-coral: #D6645D;
+      --text: #F1F5F9;
+      --text-muted: #94A3B8;
+      --font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: radial-gradient(circle at 50% 0%, #172038 0%, var(--bg) 75%);
+      color: var(--text);
+      font-family: var(--font);
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+    .timeline-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .timeline-header-main {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    .timeline-header-main h1 {
+      font-size: 2.2rem;
+      background: linear-gradient(135deg, #439DDF, #4F87ED, #9476C5, #D6645D);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 12px;
+    }
+    .timeline-header-main p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+    .timeline {
+      position: relative;
+      padding: 20px 0;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: linear-gradient(180deg, #4F87ED, #9476C5, #D6645D);
+      transform: translateX(-50%);
+    }
+    .timeline-item {
+      position: relative;
+      width: 50%;
+      margin-bottom: 40px;
+    }
+    .timeline-left {
+      left: 0;
+      padding-right: 45px;
+    }
+    .timeline-right {
+      left: 50%;
+      padding-left: 45px;
+    }
+    .timeline-badge-icon {
+      position: absolute;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #111827;
+      border: 2px solid var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 15px;
+      z-index: 2;
+      box-shadow: 0 0 15px rgba(79, 135, 237, 0.4);
+    }
+    .timeline-left .timeline-badge-icon {
+      right: -22px;
+    }
+    .timeline-right .timeline-badge-icon {
+      left: -22px;
+    }
+    .timeline-badge-icon svg {
+      width: 24px;
+      height: 24px;
+    }
+    .timeline-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .timeline-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(148, 118, 197, 0.6);
+    }
+    .timeline-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .timeline-date {
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: #38BDF8;
+      letter-spacing: 0.5px;
+    }
+    .timeline-tag {
+      font-size: 0.75rem;
+      padding: 3px 8px;
+      border-radius: 9999px;
+      background: rgba(79, 135, 237, 0.2);
+      border: 1px solid rgba(79, 135, 237, 0.4);
+      color: #93C5FD;
+      font-weight: 600;
+    }
+    .timeline-title {
+      font-size: 1.2rem;
+      margin-bottom: 4px;
+      color: #F8FAFC;
+    }
+    .timeline-product {
+      font-size: 0.85rem;
+      color: #A855F7;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+    .timeline-desc {
+      font-size: 0.92rem;
+      line-height: 1.5;
+      color: var(--text-muted);
+    }
+    @media (max-width: 768px) {
+      .timeline::before { left: 24px; }
+      .timeline-item { width: 100%; left: 0 !important; padding-left: 60px !important; padding-right: 0 !important; }
+      .timeline-left .timeline-badge-icon, .timeline-right .timeline-badge-icon { left: 2px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="timeline-container">
+    <div class="timeline-header-main">
+      <h1>Hành Trình & Quyết Định Chiến Lược Cốt Lõi</h1>
+      <p>Reverse-engineering các cột mốc tạo nên thành công của hệ sinh thái Google Gemini & Vertical AI</p>
+    </div>
+    <div class="timeline">
+      
+        <div class="timeline-item timeline-left">
+          <div class="timeline-badge-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gemini-sparkle-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#439DDF"/>
+      <stop offset="30%" stop-color="#4F87ED"/>
+      <stop offset="60%" stop-color="#9476C5"/>
+      <stop offset="85%" stop-color="#BC688E"/>
+      <stop offset="100%" stop-color="#D6645D"/>
+    </linearGradient>
+  </defs>
+  <path d="M11.04 19.32Q12 21.51 12 24q0-2.49.93-4.68.96-2.19 2.58-3.81t3.81-2.55Q21.51 12 24 12q-2.49 0-4.68-.93a12.3 12.3 0 0 1-3.81-2.58 12.3 12.3 0 0 1-2.58-3.81Q12 2.49 12 0q0 2.49-.96 4.68-.93 2.19-2.55 3.81a12.3 12.3 0 0 1-3.81 2.58Q2.49 12 0 12q2.49 0 4.68.96 2.19.93 3.81 2.55t2.55 3.81" fill="url(#gemini-sparkle-gradient)"/>
+</svg>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <span class="timeline-date">06/2017</span>
+              <span class="timeline-tag">Breakthrough</span>
+            </div>
+            <h3 class="timeline-title">Nền móng Transformer</h3>
+            <div class="timeline-product">Google Brain / Research</div>
+            <p class="timeline-desc">Công bố cơ chế Self-Attention thay thế RNN/CNN, khởi nguyên toàn bộ kỷ nguyên LLM.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item timeline-right">
+          <div class="timeline-badge-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gemini-sparkle-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#439DDF"/>
+      <stop offset="30%" stop-color="#4F87ED"/>
+      <stop offset="60%" stop-color="#9476C5"/>
+      <stop offset="85%" stop-color="#BC688E"/>
+      <stop offset="100%" stop-color="#D6645D"/>
+    </linearGradient>
+  </defs>
+  <path d="M11.04 19.32Q12 21.51 12 24q0-2.49.93-4.68.96-2.19 2.58-3.81t3.81-2.55Q21.51 12 24 12q-2.49 0-4.68-.93a12.3 12.3 0 0 1-3.81-2.58 12.3 12.3 0 0 1-2.58-3.81Q12 2.49 12 0q0 2.49-.96 4.68-.93 2.19-2.55 3.81a12.3 12.3 0 0 1-3.81 2.58Q2.49 12 0 12q2.49 0 4.68.96 2.19.93 3.81 2.55t2.55 3.81" fill="url(#gemini-sparkle-gradient)"/>
+</svg>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <span class="timeline-date">10/2018</span>
+              <span class="timeline-tag">Core Moat</span>
+            </div>
+            <h3 class="timeline-title">BERT & Core Search</h3>
+            <div class="timeline-product">Google Search</div>
+            <p class="timeline-desc">Mô hình ngữ cảnh 2 chiều tích hợp trực tiếp vào Search, củng cố hào kinh tế cốt lõi.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item timeline-left">
+          <div class="timeline-badge-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gemini-sparkle-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#439DDF"/>
+      <stop offset="30%" stop-color="#4F87ED"/>
+      <stop offset="60%" stop-color="#9476C5"/>
+      <stop offset="85%" stop-color="#BC688E"/>
+      <stop offset="100%" stop-color="#D6645D"/>
+    </linearGradient>
+  </defs>
+  <path d="M11.04 19.32Q12 21.51 12 24q0-2.49.93-4.68.96-2.19 2.58-3.81t3.81-2.55Q21.51 12 24 12q-2.49 0-4.68-.93a12.3 12.3 0 0 1-3.81-2.58 12.3 12.3 0 0 1-2.58-3.81Q12 2.49 12 0q0 2.49-.96 4.68-.93 2.19-2.55 3.81a12.3 12.3 0 0 1-3.81 2.58Q2.49 12 0 12q2.49 0 4.68.96 2.19.93 3.81 2.55t2.55 3.81" fill="url(#gemini-sparkle-gradient)"/>
+</svg>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <span class="timeline-date">12/2023</span>
+              <span class="timeline-tag">Native Multimodal</span>
+            </div>
+            <h3 class="timeline-title">Gemini 1.0 & Cloud TPU v5p</h3>
+            <div class="timeline-product">Google DeepMind</div>
+            <p class="timeline-desc">Hợp nhất Brain & DeepMind, kiến trúc Native Multimodal chạy trên hạ tầng TPU tự chủ.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item timeline-right">
+          <div class="timeline-badge-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gemini-sparkle-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#439DDF"/>
+      <stop offset="30%" stop-color="#4F87ED"/>
+      <stop offset="60%" stop-color="#9476C5"/>
+      <stop offset="85%" stop-color="#BC688E"/>
+      <stop offset="100%" stop-color="#D6645D"/>
+    </linearGradient>
+  </defs>
+  <path d="M11.04 19.32Q12 21.51 12 24q0-2.49.93-4.68.96-2.19 2.58-3.81t3.81-2.55Q21.51 12 24 12q-2.49 0-4.68-.93a12.3 12.3 0 0 1-3.81-2.58 12.3 12.3 0 0 1-2.58-3.81Q12 2.49 12 0q0 2.49-.96 4.68-.93 2.19-2.55 3.81a12.3 12.3 0 0 1-3.81 2.58Q2.49 12 0 12q2.49 0 4.68.96 2.19.93 3.81 2.55t2.55 3.81" fill="url(#gemini-sparkle-gradient)"/>
+</svg>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <span class="timeline-date">02-05/2024</span>
+              <span class="timeline-tag">10x Value</span>
+            </div>
+            <h3 class="timeline-title">Cửa sổ Ngữ cảnh 1M-2M Token</h3>
+            <div class="timeline-product">Gemini 1.5 Pro & Flash</div>
+            <p class="timeline-desc">Phá vỡ giới hạn RAG với MoE và độ truy hồi >99.7% Needle-In-A-Haystack.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item timeline-left">
+          <div class="timeline-badge-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106 78" width="100%" height="100%">
+  <path fill="#1A73E8" d="M52.96.1C23.71.1,0,23.61,0,52.62v25.15h9.76v-2.51c0-11.77,9.61-21.31,21.48-21.31s21.48,9.54,21.48,21.31v2.51h9.76v-2.51c0-17.11-13.99-30.98-31.24-30.98-6.72,0-12.94,2.1-18.03,5.69,5.33-10.51,16.31-17.73,28.99-17.73,17.91,0,32.43,14.41,32.43,32.16v13.36h9.76v-13.36c0-23.11-18.89-41.85-42.19-41.85-10.48,0-20.06,3.79-27.44,10.06,7.25-13.59,21.63-22.84,38.21-22.84,23.86,0,43.2,19.18,43.2,42.84v25.15h9.76v-25.15C105.92,23.61,82.21.1,52.96.1Z"/>
+</svg>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <span class="timeline-date">09/2024</span>
+              <span class="timeline-tag">Vertical AI</span>
+            </div>
+            <h3 class="timeline-title">Audio Overview Pivot</h3>
+            <div class="timeline-product">NotebookLM</div>
+            <p class="timeline-desc">Biến kho tài liệu tĩnh thành podcast thảo luận 2 chiều có kiểm chứng nguồn nghiêm ngặt.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item timeline-right">
+          <div class="timeline-badge-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gemini-sparkle-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#439DDF"/>
+      <stop offset="30%" stop-color="#4F87ED"/>
+      <stop offset="60%" stop-color="#9476C5"/>
+      <stop offset="85%" stop-color="#BC688E"/>
+      <stop offset="100%" stop-color="#D6645D"/>
+    </linearGradient>
+  </defs>
+  <path d="M11.04 19.32Q12 21.51 12 24q0-2.49.93-4.68.96-2.19 2.58-3.81t3.81-2.55Q21.51 12 24 12q-2.49 0-4.68-.93a12.3 12.3 0 0 1-3.81-2.58 12.3 12.3 0 0 1-2.58-3.81Q12 2.49 12 0q0 2.49-.96 4.68-.93 2.19-2.55 3.81a12.3 12.3 0 0 1-3.81 2.58Q2.49 12 0 12q2.49 0 4.68.96 2.19.93 3.81 2.55t2.55 3.81" fill="url(#gemini-sparkle-gradient)"/>
+</svg>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <span class="timeline-date">12/2024</span>
+              <span class="timeline-tag">Autonomous Agent</span>
+            </div>
+            <h3 class="timeline-title">Native Agentic Era</h3>
+            <div class="timeline-product">Gemini 2.0 & Deep Research</div>
+            <p class="timeline-desc">Multimodal Live API thời gian thực và Deep Research tác tử tự động duyệt web đa bước.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item timeline-left">
+          <div class="timeline-badge-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gemini-sparkle-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#439DDF"/>
+      <stop offset="30%" stop-color="#4F87ED"/>
+      <stop offset="60%" stop-color="#9476C5"/>
+      <stop offset="85%" stop-color="#BC688E"/>
+      <stop offset="100%" stop-color="#D6645D"/>
+    </linearGradient>
+  </defs>
+  <path d="M11.04 19.32Q12 21.51 12 24q0-2.49.93-4.68.96-2.19 2.58-3.81t3.81-2.55Q21.51 12 24 12q-2.49 0-4.68-.93a12.3 12.3 0 0 1-3.81-2.58 12.3 12.3 0 0 1-2.58-3.81Q12 2.49 12 0q0 2.49-.96 4.68-.93 2.19-2.55 3.81a12.3 12.3 0 0 1-3.81 2.58Q2.49 12 0 12q2.49 0 4.68.96 2.19.93 3.81 2.55t2.55 3.81" fill="url(#gemini-sparkle-gradient)"/>
+</svg>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <span class="timeline-date">05-08/2026</span>
+              <span class="timeline-tag">Unit Economics</span>
+            </div>
+            <h3 class="timeline-title">Flash Cadence Strategy</h3>
+            <div class="timeline-product">Gemini 3.5-3.8 Flash</div>
+            <p class="timeline-desc">4 mô hình trong 106 ngày; giảm chi phí 5x ($2.36 vs $11.84) và năng lượng 33x.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item timeline-right">
+          <div class="timeline-badge-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gemini-sparkle-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#439DDF"/>
+      <stop offset="30%" stop-color="#4F87ED"/>
+      <stop offset="60%" stop-color="#9476C5"/>
+      <stop offset="85%" stop-color="#BC688E"/>
+      <stop offset="100%" stop-color="#D6645D"/>
+    </linearGradient>
+  </defs>
+  <path d="M11.04 19.32Q12 21.51 12 24q0-2.49.93-4.68.96-2.19 2.58-3.81t3.81-2.55Q21.51 12 24 12q-2.49 0-4.68-.93a12.3 12.3 0 0 1-3.81-2.58 12.3 12.3 0 0 1-2.58-3.81Q12 2.49 12 0q0 2.49-.96 4.68-.93 2.19-2.55 3.81a12.3 12.3 0 0 1-3.81 2.58Q2.49 12 0 12q2.49 0 4.68.96 2.19.93 3.81 2.55t2.55 3.81" fill="url(#gemini-sparkle-gradient)"/>
+</svg>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <span class="timeline-date">09/2026</span>
+              <span class="timeline-tag">Frontier Agent</span>
+            </div>
+            <h3 class="timeline-title">Gemini 4 Argon & 1M Output</h3>
+            <div class="timeline-product">Gemini 4 Argon</div>
+            <p class="timeline-desc">Trần xuất 1M token; chuyển đổi 800k dòng Zircon OS sang Rust; phòng thủ an ninh mạng.</p>
+          </div>
+        </div>
+        
+    </div>
+  </div>
+</body>
+</html>
